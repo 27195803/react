@@ -23,6 +23,7 @@ request.interceptors.response.use(
 );
 
 export default function ajax<T>(method: Method, url: string, params: {[key: string]: any} = {}, data: {[key: string]: any} = {}): Promise<T> {
+  //debugger;
   url = url.replace(/:\w+/g, (flag) => {
     const key = flag.substr(1);
     if (params[key]) {
@@ -42,6 +43,9 @@ export default function ajax<T>(method: Method, url: string, params: {[key: stri
       return false;
     }
   });
+  // if (url.indexOf('session') > -1) {
+  //   url = 'https://localhost:1001' + url;
+  // }
 
   return request.request({method, url, params, data}).then((response) => response.data);
 }

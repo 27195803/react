@@ -23,8 +23,8 @@
     "src/**/*.less": "stylelint"
   },
   "author": {
-    "name": "wooline",
-    "email": "wooline@qq.com"
+    "name": "Panbb",
+    "email": "27195803@qq.com"
   },
   "license": "MIT",
   "private": true,
@@ -35,13 +35,13 @@
     "chrome >= 70"
   ],
   "baseConf": {
-    "siteName": "@medux",
+    "siteName": "智慧云平台",
     "clientPublicPath": "/",
     "server": "http://localhost:7445",
-    "mock": true,
+    "mock": false,
     "proxy": {
       "/api/**": {
-        "target": "http://192.168.0.232:8000",
+        "target": "https://localhost:1001",
         "pathRewrite": {
           "^/api": ""
         },
